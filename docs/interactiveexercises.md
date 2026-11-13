@@ -34,11 +34,10 @@ Evacuation decisions are rarely simple. `HVTsafe` creates an anonymous space for
 ![](evacuated.png)
 
 <iframe
-  src="https://twowaydisplay.streamlit.app/?game=Coordinate&view=all&embed=true#what-shelters-offer-by-location"
+  src="https://twowaydisplay.streamlit.app?game=Coordinate&amp;view=all&amp;present=1"
   width="100%"
   height="650"
-  style="border: none;"
-  loading="lazy">
+  style="border: none;">
 </iframe>
 
 ## Exercise 4: Three-Track Resource & Shelter Engineering (`HVTcoordinate`)
