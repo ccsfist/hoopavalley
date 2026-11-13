@@ -12,13 +12,14 @@ During an emergency, the system coordinates staging and respite across five key 
 | **Willow Creek** | 8 miles off territory | Alternative option with additional capacity |
 
 <iframe
-  src="[https://example.com](https://twowaydisplay.streamlit.app?game=Coordinate&view=all&present=1)"
+  src="[https://twowaydisplay.streamlit.app?game=Coordinate&view=all&present=1](https://twowaydisplay.streamlit.app?game=Coordinate&view=all&present=1)"
   title="Live Site Preview"
   width="100%"
   height="600"
   style="border: 1px solid #ccc; border-radius: 6px;"
   loading="lazy">
 </iframe>
+
 
 ![](network.png)
 
