@@ -33,6 +33,14 @@ Evacuation decisions are rarely simple. `HVTsafe` creates an anonymous space for
 
 ![](evacuated.png)
 
+<iframe
+  src="https://twowaydisplay.streamlit.app/?game=Coordinate&view=all&embed=true#what-shelters-offer-by-location"
+  width="100%"
+  height="650"
+  style="border: none;"
+  loading="lazy">
+</iframe>
+
 ## Exercise 4: Three-Track Resource & Shelter Engineering (`HVTcoordinate`)
 
 To align logistics across the entire community, `HVTcoordinate` runs three simultaneous tracks:
