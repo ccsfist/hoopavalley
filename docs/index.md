@@ -1,4 +1,5 @@
 # Two-Way Communication & Readiness for Winter Storms
+
 	** Hoopa Valley Tribe • Columbia NCDP • Tribal Resilience Initiative **
 
 The initiative is a:
