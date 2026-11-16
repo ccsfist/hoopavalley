@@ -51,6 +51,6 @@ To align logistics across the entire community, `HVTcoordinate` runs three simul
 
 
 
-<div id="slide-config" data-type="start" data-next="../hoopavalleynetwork/"> </div>
+<div id="slide-config" data-type="start" data-next="../interactiveexercises_HVTstorm_1/"> </div>
 
 

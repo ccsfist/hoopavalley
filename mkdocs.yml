@@ -14,6 +14,14 @@ nav:
 - 'index.md' 
 - 'thecommunicationshift.md'
 - 'interactiveexercises.md'
+- 'interactiveexercises_HVTstorm_1.md'
+- 'interactiveexercises_HVTstorm_2.md'
+- 'interactiveexercises_HVTalert_1.md'
+- 'interactiveexercises_HVTalert_2.md'
+- 'interactiveexercises_HVTsafe_1.md'
+- 'interactiveexercises_HVTsafe_2.md'
+- 'interactiveexercises_HVTcoordinate_1.md'
+- 'interactiveexercises_HVTcoordinate_2.md'
 - 'hoopavalleynetwork.md'
 
 plugins:
