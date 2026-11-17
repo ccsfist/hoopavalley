@@ -12,15 +12,10 @@ Traditional emergency systems rely on one-way alerts that broadcast information 
 ## Hoopa Valley Operational Reality
 
 Emergency planning in Hoopa Valley must account for steep canyon geography and winter isolation:
-	- **Severed travel routes:** Landslides and fallen trees frequently block Highway 96 and Bald Hills Road.
-	- **Extended power loss:** Multi-day PG&E outages threaten home heating and critical medical oxygen devices.
-	- **Rural addressing:** Many households rely on local landmarks and mile markers rather than standard street addresses.
-	- **Sector isolation:** The valley's North, Central, and South sectors can easily become cut off from one another during a storm.
 
-
-	
+- **Severed travel routes:** Landslides and fallen trees frequently block Highway 96 and Bald Hills Road.
+- **Extended power loss:** Multi-day PG&E outages threaten home heating and critical medical oxygen devices.
+- **Rural addressing:** Many households rely on local landmarks and mile markers rather than standard street addresses.
+- **Sector isolation:** The valley's North, Central, and South sectors can easily become cut off from one another during a storm.
 
 <div id="slide-config" data-type="start" data-next="../interactiveexercises/"> </div>
-
-
-
