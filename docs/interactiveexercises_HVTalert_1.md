@@ -1,7 +1,9 @@
 # Exercise 2: HVTalert--Going beyond one way alerts to ask questions
 
 
-This is an example of a potential alert system, where instead of simply getting an alert, the community has a chance to provide feedback, or ask questions.  During an active emergency, `HVTalert` could inform triage by routing residents based on their immediate situation:
+This is an example of a potential alert system, where instead of simply getting an alert, the community has a chance to provide feedback, or ask questions.  During an active emergency, `HVTalert` could inform triage by routing residents based on their immediate situation.
+
+Of course, this avenue depends on people having functioning networks to be workable, which is often a challenge during a disaster.  
 
 | Initial Reply | Automated Follow-Up Questions | OES Action Output |
 | :--- | :--- | :--- |
