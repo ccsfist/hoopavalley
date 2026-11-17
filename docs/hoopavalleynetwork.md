@@ -1,8 +1,11 @@
-# Hoopa Valley Facility Network
+# Hoopa Valley Facilities
 
-During an emergency, the system coordinates staging and respite across five key facilities:
+These are some of the facilities across Hoopa Valley for 
+coordinating staging and respite.  
 
-| Hoopa Facility | Location | Emergency Staging Role |
+How might you use the tools we just explored to help people be better informed about the facilities and services, and to have the facilities better optimized to provide the services the community needs? 
+
+| Hoopa Facility | Location | Description |
 | :--- | :--- | :--- |
 | **Community Center** | 11860 State Hwy 96 (Agency) | Central Red Cross shelter & supply hub |
 | **K'ima:w Medical Center** | 535 Airport Rd | Medical triage & critical device power |
@@ -17,9 +20,9 @@ During an emergency, the system coordinates staging and respite across five key 
 This framework is built to be adapted and self-hosted by neighboring Tribal Nations:
 
 - **Multi-hazard ready:** Customize the SMS scripts for wildfires, floods, or other regional emergencies.
-- **Local landmarks & language:** Swap in local road names, shelter locations, and Tribal audio recordings.
+- **Local landmarks & language:** Utilize local road names, shelter locations, and Tribal audio recordings.
 - **Inter-Tribal mutual aid:** Share operational lessons across Yurok, Karuk, and neighboring communities.
-- **Self-hosted on GitHub:** Fork the open-source codebase and connect your own SMS phone line.
+- **Self-hosted on GitHub:** Fork the open-source codebase and set up your own SMS phone line.
 
 ![](replication.png)
 
