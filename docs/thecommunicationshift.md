@@ -1,6 +1,6 @@
 # **The Communication Shift: From Broadcasting to Listening**
 
-Traditional emergency systems rely on one-way alerts that broadcast information without knowing who actually needs help. But most communication devices, and many systems already in place can not only send, but can also recieve.  There may be major benefits to using those technologies to shift the focus from broadcasting orders to listening by using thoughtful two-way SMS structured conversations that might be focused enough to work with limited cell signal
+Existing emergency systems rely on one-way alerts that broadcast information without knowing who actually needs help. But most communication devices, and many systems already in place can not only send, but can also recieve.  There may be major benefits to using those technologies to shift the focus from broadcasting orders to listening by using thoughtful two-way SMS structured conversations that might be focused enough to work with limited cell signal
 
 We want to discuss with you how you might be able to unlock opportunities using two way disaster communications.
 
