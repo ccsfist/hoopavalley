@@ -11,6 +11,10 @@ We want to discuss with you how you might be able to unlock opportunities using 
 | **Bandwidth heavy:** Lots of extra searching for how and who to communicate with-Web links may fail during severe outages. | **1-bar resilience:** Thoughtful, pre-planned Plain SMS. |
 | **Siloed systems:** Tribal and state data can be disconnected. | **Shared picture:** Connects Elders, field crews, and OES working together. |
 
+## Think about how you might use two way communication in Disasters
+
+<img src="HoopaExperts.jpg" alt="Hoopa Fire" style="width:300px;">
+
 ## Hoopa Valley Operational Reality
 
 Emergency planning in Hoopa Valley must account for steep canyon geography and winter isolation:
