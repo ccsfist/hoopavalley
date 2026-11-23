@@ -13,7 +13,7 @@ We want to discuss with you how you might be able to unlock opportunities using 
 
 ## Think about how you might use two way communication in Disasters
 
-<img src="HoopaExperts.jpg" alt="Hoopa Fire" style="width:300px;">
+<img src="HoopaExperts.jpg" alt="Hoopa experts" style="width:300px;">
 
 ## Hoopa Valley Operational Reality
 
