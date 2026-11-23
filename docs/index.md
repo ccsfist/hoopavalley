@@ -1,4 +1,8 @@
-# Two-Way Communication & Readiness for Winter Storms
+# Two-Way Communication & Readiness 
+
+<img src="HoopaFireDepartment.jpg" alt="Hoopa Fire" style="width:300px;">
+
+## We start with this Winter Storm season, and then Fire later
 
 **Hoopa Valley Tribe • Columbia NCDP • Tribal Resilience Initiative**
 
@@ -16,5 +20,6 @@ The project's foundation and governance are built on:
 - **Tribal Data Ownership**: ensuring that Tribes maintain full control over data storage, access, and deletion.
 - **Open-Source Codebase**: the platform uses an open-source codebase that is publicly adaptable via columbia-desdr.github.io.
 - **Co-Design Team**: Led through a close co-design partnership with Dan Osgood and RobRoy from Hoopa Valley Tribe.
+
 
 <div id="slide-config" data-type="start" data-next="../thecommunicationshift/"> </div>
