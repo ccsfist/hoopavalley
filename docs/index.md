@@ -2,7 +2,7 @@
 
 <img src="HoopaFireDepartment.jpg" alt="Hoopa Fire" style="width:300px;">
 
-## We start with this Winter Storm season, and then Fire later
+## We focus now on the Winter Storm season, Fire is next!
 
 **Hoopa Valley Tribe • Columbia NCDP • Tribal Resilience Initiative**
 
