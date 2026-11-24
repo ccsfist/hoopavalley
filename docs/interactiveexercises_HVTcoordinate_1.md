@@ -16,10 +16,4 @@ To end the activity at any time send **#bye**
 
 The next page has the results.
 
-- What gaps do you see?
-
-- Where did the service get offered when needed?
-
-- How could you use this communications strategy before and during emergencies?
-
 <div id="slide-config" data-type="start" data-next="../interactiveexercises_HVTcoordinate_2/"> </div>
