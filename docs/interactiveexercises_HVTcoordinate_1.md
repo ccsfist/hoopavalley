@@ -28,5 +28,8 @@ To end the activity at any time send **#bye**
 
 - How might you use versions of this before, during a disaster?
 
+Note, the locations in the game are drawn as hypothetical points from the below map of locations mentioned in Hoopa Valley Emergency Protocol Documents.  What locations would be most appropriate for a real world implimentation?
+
+<iframe src="https://ccsfist.github.io/hoopavalley/ReportMentionedLocations.html" width="100%" height="600" style="border:none;"></iframe>
 
 <div id="slide-config" data-type="start" data-next="../interactiveexercises_HVTcoordinate_2/"> </div>

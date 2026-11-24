@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoopa Valley Interactive Map</title>
+    
+    <!-- Load Leaflet CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    
+    <style>
+        html, body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            overflow: hidden; 
+        }
+        #sidebar {
+            width: 320px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            overflow-y: auto;
+            border-right: 1px solid #ddd;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        #map-container {
+            flex-grow: 1;
+            height: 100vh;
+            position: relative;
+        }
+        #map {
+            width: 100%;
+            height: 100%; 
+            z-index: 1;
+        }
+        h2 { font-size: 1.2em; margin-top: 0; color: #333; }
+        h3 { font-size: 1em; color: #555; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-top: 20px;}
+        ul { list-style-type: none; padding: 0; margin: 0; }
+        li { padding: 8px 0; border-bottom: 1px solid #eee; cursor: pointer; color: #0066cc; font-size: 0.9em; }
+        li:hover { text-decoration: underline; background-color: #eef; }
+        .unmapped-li { color: #555; cursor: default; }
+        .unmapped-li:hover { text-decoration: none; background-color: transparent; }
+        
+        /* Custom styling for permanent text labels on the map */
+        .map-label {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #888;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            font-weight: bold;
+            font-size: 11px;
+            color: #333;
+            padding: 2px 4px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <h2>Hoopa Valley EOP Locations</h2>
+        
+        <h3>Unmapped / General Areas</h3>
+        <p style="font-size: 0.85em; color: #666; margin-top: 0;">These locations are generalized areas or culturally sensitive sites without distinct public coordinates.</p>
+        <ul id="unmapped-list"></ul>
+
+        <h3>Mapped Locations</h3>
+        <ul id="mapped-list"></ul>
+    </div>
+
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize the map
+            var map = L.map('map').setView([41.055, -123.675], 13);
+
+            // Use Esri World Street Map tiles
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri'
+            }).addTo(map);
+
+            // Force map to recalculate its size after rendering
+            setTimeout(function(){ map.invalidateSize(); }, 200);
+
+            // Define known locations with specific directions and offsets to prevent label overlap
+            var mappedLocations = [
+                // Regional
+                { id: "weitchpec", name: "Weitchpec", coords: [41.185, -123.700], dir: "top", off: [0, -10] },
+                { id: "willow", name: "Willow Creek", coords: [40.940, -123.630], dir: "bottom", off: [0, 10] },
+                { id: "eureka", name: "Eureka", coords: [40.802, -124.163], dir: "left", off: [-10, 0] },
+                { id: "redding", name: "Redding", coords: [40.586, -122.391], dir: "right", off: [10, 0] },
+                { id: "trinity", name: "Trinity River", coords: [41.080, -123.680], dir: "right", off: [10, 0] },
+                { id: "klamath", name: "Klamath River (Confluence)", coords: [41.190, -123.710], dir: "right", off: [10, 0] },
+                { id: "mather", name: "Threat Assessment Center (Mather)", coords: [38.555, -121.285], dir: "top", off: [0, -10] },
+                { id: "mcclellan", name: "Intelligence Center (McClellan)", coords: [38.666, -121.398], dir: "bottom", off: [0, 10] },
+                
+                // Hoopa Core Cluster (Alternating directions and pushing offsets outward to create an exploded feel)
+                { id: "hoopa", name: "Hoopa Valley (Center)", coords: [41.055, -123.675], dir: "left", off: [-15, -10] },
+                { id: "airport", name: "Hoopa Airport", coords: [41.038, -123.666], dir: "bottom", off: [0, 15] },
+                { id: "inn", name: "Tswenaldin Inn", coords: [41.041, -123.671], dir: "left", off: [-15, 0] },
+                { id: "casino", name: "Lucky Bear Casino", coords: [41.042, -123.670], dir: "bottom", off: [0, 15] },
+                { id: "creditunion", name: "Central Coast Credit Union", coords: [41.044, -123.671], dir: "left", off: [-20, -15] },
+                { id: "minimart", name: "Hoopa Mini Mart", coords: [41.045, -123.670], dir: "right", off: [15, 0] },
+                { id: "fire_eoc", name: "Fire Dept / EOC", coords: [41.046, -123.671], dir: "left", off: [-20, 10] },
+                { id: "police", name: "Tribal Police Department", coords: [41.047, -123.672], dir: "right", off: [20, 15] },
+                { id: "kimaw", name: "K'ima:w Medical Center", coords: [41.050, -123.672], dir: "left", off: [-15, -15] },
+                { id: "pud", name: "Public Utilities District", coords: [41.051, -123.671], dir: "top", off: [0, -15] },
+                
+                // Fields/Villages (Staggered to prevent overlap with each other)
+                { id: "campbell", name: "Campbell Field", coords: [41.0288, -123.6552], dir: "bottom", off: [0, 10] },
+                { id: "matilton", name: "Matilton Field", coords: [41.0660, -123.6700], dir: "right", off: [10, 0] },
+                { id: "agency", name: "Agency Field", coords: [41.0550, -123.6750], dir: "top", off: [0, -15] },
+                { id: "hostler", name: "Hostler Field", coords: [41.0748, -123.6878], dir: "right", off: [15, 10] },
+                { id: "mescat", name: "Mescat Field", coords: [41.0822, -123.6908], dir: "top", off: [0, -10] },
+                { id: "norton", name: "Norton Field", coords: [41.0850, -123.6950], dir: "bottom", off: [0, 10] },
+                { id: "soctish", name: "Soctish / Chenone", coords: [41.0898, -123.7033], dir: "left", off: [-15, 0] },
+                { id: "baldhills", name: "Bald Hills District", coords: [41.0960, -123.6840], dir: "top", off: [0, -10] }
+            ];
+
+            // Define locations with no specific coordinates found
+            var unmappedLocations = [
+                "Village / Dance / Ceremonial grounds",
+                "East and west side response/stockpile centers"
+            ];
+
+            var markers = {};
+
+            // Populate unmapped list in sidebar first
+            unmappedLocations.forEach(function(name) {
+                var li = document.createElement("li");
+                li.className = "unmapped-li";
+                li.innerHTML = name;
+                document.getElementById("unmapped-list").appendChild(li);
+            });
+
+            // Add markers to the map with offset/directed tooltips
+            mappedLocations.forEach(function(loc) {
+                var marker = L.marker(loc.coords).addTo(map);
+                
+                // Add permanent text label using the specific direction and offset
+                marker.bindTooltip(loc.name, {
+                    permanent: true, 
+                    direction: loc.dir, 
+                    className: 'map-label',
+                    offset: loc.off
+                });
+                
+                markers[loc.id] = marker;
+
+                // Add to sidebar
+                var li = document.createElement("li");
+                li.innerHTML = loc.name;
+                li.onclick = function() {
+                    map.setView(loc.coords, 15, { animate: true });
+                    marker.openPopup();
+                };
+                document.getElementById("mapped-list").appendChild(li);
+            });
+        });
+    </script>
+
+</body>
+</html>
