@@ -14,6 +14,19 @@ To start the activity, send by text or WhatsApp to
 
 To end the activity at any time send **#bye**
 
-The next page has the results.
+## The next slide will show the results of the exercise
+
+-- **It shows what is offered at each location**
+
+- **Click on "Needs" to see what people needed**
+
+- **click on <-Results to see the gap between what people need and what is offeed**
+
+- If you go again, could you better align needs and what is offered?
+
+- Are there chances it could get worse if you dont update the communication?
+
+- How might you use versions of this before, during a disaster?
+
 
 <div id="slide-config" data-type="start" data-next="../interactiveexercises_HVTcoordinate_2/"> </div>

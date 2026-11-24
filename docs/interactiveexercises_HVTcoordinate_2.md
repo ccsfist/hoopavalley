@@ -1,16 +1,5 @@
 # Exercise 4: HVTcoordinate Responses
 
-## This map shows what shelters offer.  
-
-- **Click on "Needs" to see what people needed**
-
-- **click on <-Results to see the gap between what people need and what is offeed**
-
-- If you go again, could you better align needs and what is offered?
-
-- Are there chances it could get worse if you dont update the communication?
-
-- How might you use versions of this before, during a disaster?
 <style>
   .live-frame { position: relative; height: 90vh; }
   .live-frame iframe { width: 100%; height: 100%; border: none; }
