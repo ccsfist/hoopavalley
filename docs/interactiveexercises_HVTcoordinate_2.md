@@ -1,5 +1,16 @@
 # Exercise 4: HVTcoordinate Responses
 
+## This map shows what shelters offer.  
+
+- **Click on "Needs" to see what people needed**
+
+- **click on <-Results to see the gap between what people need and what is offeed**
+
+- If you go again, could you better align needs and what is offered?
+
+- Are there chances it could get worse if you dont update the communication?
+
+- How might you use versions of this before, during a disaster?
 <style>
   .live-frame { position: relative; height: 90vh; }
   .live-frame iframe { width: 100%; height: 100%; border: none; }
@@ -24,7 +35,7 @@
     <div>Loading live results…</div>
   </div>
   <iframe
-    src="https://twowaydisplay.streamlit.app/?game=Coordinate&amp;view=all&amp;present=1&amp;embed=true"
+    src="https://twowaydisplay.streamlit.app/?game=Coordinate&amp;map=pies&amp;show=offers&amp;view=all&amp;embed=true"
     onload="var o=this.previousElementSibling; setTimeout(function(){ o.classList.add('done'); }, 2000);">
   </iframe>
 </div>
